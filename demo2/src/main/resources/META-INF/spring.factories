@@ -1,0 +1,5 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.study.solo.SoloConfiguration
+key에 해당하는 spring부트 EnableAutoConfiguration이 켜져 있을 경우 적어준 설정 파일(Configuration파일)을 자동으로 읽어온다.
+    후에 SOLO프로젝트에 있는 pom.xml에 js-spring-boot-starter를 복사해서 필요한 프로젝트 패키지의 dependency에 복사하면 다른 프로젝트의 Bean을 사용할 수 있게 되는 것이다.
+    메인 자바파일에서 @Autowired로 Solo를 주입받아 사용할 수 있음.그럼 프로젝트에 Solo는 사용할 수 있음. 
