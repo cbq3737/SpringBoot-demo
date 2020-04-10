@@ -27,6 +27,21 @@
 //Application은 3가지 타입이있는데 None/Reactive/Servlet인데 Spring MVC가 있으면 기본적으로 Servlet타입으로 돌고, Spring WebFlux가있으면 Reactive타입으로 돈다.
 //Application을 실행하고 난 후,뭔가를 실행하고 싶을때->AppRunner.java파일로 가보자
 
+//스프링부트의 profile 설정 : 프로파일은 Bean들의 묶음이다.(테스트 환경에서는 어떤 묶음의 Bean들을 쓰겠다.실제 배포에서는 어떤 묶음의 Bean들을 쓰겠다는 것이다.)->BaseConfiguration,TestConfiguration
+//특정할 프로파일에서만 특정한 Bean을 등록하고 싶다거나,애플리케이션의 동작이 특정 프로파일 일 때 Bean설정을 다르게 하고 싶다거나 할 때 사용
+//application.properties를 이용할경우 => application-{profile}.properties형식으로 파일 생성하면 됨.
+
+//스프링 부트 로깅(통신 소프트웨어 간의 메시지를 기록하는 로그를 하는 행위) 원리:실제로 로깅을 하는 것이 아니라,로거 API들을 추상화 해놓은 인터페이스 
+//로깅이란: 프로그램 개발중이나 완료 후 발생할 수 있는 오류에 대해 디버깅하거나 운영중인 프로그램 상태를 모니터링 하기위해 필요한 정보를 기록하는것.
+//데이터 로거: 일련의 데이터를 로그파일로 기록하는 소프트웨어 
+//SLF4J(Simple Logging Facade for Java): 백엔드  Logger framework의 facade pattern(클래스 라이브러리 같은 어떤 소프트웨어의 다른 커다란 코드 부분에 대한 간략화된 인터페이스를 제공하는 객체, 즉 그래서 퍼사드 객체라고 부름, 복잡한 코드들을 간단한 통합 인터페이스(클래스?)를 제공해주는 역할을 함.)(즉 자바에서 사용하는 logging 프로그램을 제공하는 프레임워크)
+//SLF4J는 추상 로깅 프레임워크이기때문에 단독으로 사용되지않는다. 퍼사드 객체가 생성이 될려면 복잡한 서브 클래스들이 존재해야 하기 때문에 
+//스프링 부트는 기본적으로 commons logging을 사용함. 그렇지만 보통 SLF4j 사용. 
+//logger Facade를 사용하면 로거를 바꾸어 낄 수 있다는 장점 -> LogBack(SLF4J와 같은 backend logger framework)이 SLF4J의 구현체이다.
+//로그의 기본 포맷 : 날짜 | 시간 | 로그레벨 | PID | 쓰레드 이름 | 풀 패키지 경로 & 클래스 이름 | 메세지
+//컬로 로그 -> application.properties
+
+
 
 package com.example.demo;
 
@@ -47,7 +62,7 @@ public class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-		assertThat(environment.getProperty("my.name")).isEqualTo("beomkyu");
+		assertThat(environment.getProperty("my.name")).isEqualTo("[prod]beomkyu");//실행할때나 jar파일을 만들때 my.name의 값과 같지않으면 오류가 뜸.
 	}
 
 }

@@ -1,0 +1,67 @@
+2020-04-10 14:47:59.261  INFO 18788 --- [restartedMain] com.example.demo.DemoApplication         : Starting DemoApplication on DESKTOP-5SM74E6 with PID 18788 (C:\springboot\demo\target\classes started by BIT in C:\springboot\demo)
+2020-04-10 14:47:59.264 DEBUG 18788 --- [restartedMain] com.example.demo.DemoApplication         : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-10 14:47:59.265  INFO 18788 --- [restartedMain] com.example.demo.DemoApplication         : The following profiles are active: prod,proddb
+2020-04-10 14:47:59.467  INFO 18788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-10 14:47:59.468  INFO 18788 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-10 14:48:01.000  INFO 18788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (https) 8080 (http)
+2020-04-10 14:48:01.027  INFO 18788 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-10 14:48:01.032  INFO 18788 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-10 14:48:01.182  INFO 18788 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-10 14:48:01.182  INFO 18788 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1714 ms
+2020-04-10 14:48:01.440  INFO 18788 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 14:48:01.604  INFO 18788 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-10 14:48:02.328  INFO 18788 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (https) 8080 (http) with context path ''
+2020-04-10 14:48:02.333  INFO 18788 --- [restartedMain] com.example.demo.DemoApplication         : Started DemoApplication in 3.649 seconds (JVM running for 4.129)
+2020-04-10 14:48:02.334  INFO 18788 --- [restartedMain] com.example.demo.AppRunner               : hello logger
+2020-04-10 14:55:06.288  INFO 18788 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-10 15:05:02.022  INFO 9340 --- [restartedMain] com.example.demo.DemoApplication         : Starting DemoApplication on DESKTOP-5SM74E6 with PID 9340 (C:\springboot\demo\target\classes started by BIT in C:\springboot\demo)
+2020-04-10 15:05:02.025 DEBUG 9340 --- [restartedMain] com.example.demo.DemoApplication         : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-10 15:05:02.025  INFO 9340 --- [restartedMain] com.example.demo.DemoApplication         : The following profiles are active: prod,proddb
+2020-04-10 15:05:02.076  INFO 9340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-04-10 15:05:02.076  INFO 9340 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-04-10 15:05:03.166  INFO 9340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (https) 8080 (http)
+2020-04-10 15:05:03.189  INFO 9340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-10 15:05:03.190  INFO 9340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-10 15:05:03.275  INFO 9340 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-10 15:05:03.276  INFO 9340 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1199 ms
+2020-04-10 15:05:03.449  INFO 9340 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 15:05:03.564  INFO 9340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-10 15:05:04.333  INFO 9340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (https) 8080 (http) with context path ''
+2020-04-10 15:05:04.339  INFO 9340 --- [restartedMain] com.example.demo.DemoApplication         : Started DemoApplication in 2.735 seconds (JVM running for 3.232)
+2020-04-10 15:05:04.344  INFO 9340 --- [restartedMain] com.example.demo.AppRunner               : hello logger
+2020-04-10 15:31:21.986  INFO 9340 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-10 15:31:21.987  INFO 9340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-10 15:31:21.993  INFO 9340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 6 ms
+2020-04-10 15:46:32.276  INFO 9340 --- [Thread-7] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2020-04-10 15:46:32.613  INFO 9340 --- [restartedMain] com.example.demo.DemoApplication         : Starting DemoApplication on DESKTOP-5SM74E6 with PID 9340 (C:\springboot\demo\target\classes started by BIT in C:\springboot\demo)
+2020-04-10 15:46:32.613 DEBUG 9340 --- [restartedMain] com.example.demo.DemoApplication         : Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-04-10 15:46:32.614  INFO 9340 --- [restartedMain] com.example.demo.DemoApplication         : The following profiles are active: prod,proddb
+2020-04-10 15:46:32.849  INFO 9340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8090 (https) 8080 (http)
+2020-04-10 15:46:32.851  INFO 9340 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-04-10 15:46:32.851  INFO 9340 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.33]
+2020-04-10 15:46:32.862  INFO 9340 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-04-10 15:46:32.863  INFO 9340 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 243 ms
+2020-04-10 15:46:32.908  INFO 9340 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2020-04-10 15:46:32.935  INFO 9340 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-04-10 15:46:33.147  INFO 9340 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8090 (https) 8080 (http) with context path ''
+2020-04-10 15:46:33.148  INFO 9340 --- [restartedMain] com.example.demo.DemoApplication         : Started DemoApplication in 0.591 seconds (JVM running for 2492.142)
+2020-04-10 15:46:33.148  INFO 9340 --- [restartedMain] com.example.demo.AppRunner               : hello logger
+2020-04-10 15:46:33.150  INFO 9340 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2020-04-10 16:04:25.400  INFO 9340 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-04-10 16:04:25.402  INFO 9340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-04-10 16:04:25.419  INFO 9340 --- [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 16 ms
+2020-04-10 17:35:09.829  INFO 9340 --- [http-nio-8080-exec-1] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
+
+java.lang.IllegalArgumentException: Invalid character found in method name. HTTP method names must be tokens
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:418) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:260) ~[tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1149) [na:1.8.0_231]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:624) [na:1.8.0_231]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.33.jar:9.0.33]
+	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_231]
+
