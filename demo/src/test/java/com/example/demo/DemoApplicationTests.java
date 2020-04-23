@@ -42,6 +42,18 @@
 //컬로 로그 -> application.properties
 
 
+//테스트 파일이란?? @SpringBootTest라는 어노테이션이 붙어있는데, @SpringBootTest 어노테이션은 @SpringBootApplication 어노테이션이 붙어있는 스프링 메인 애플리케이션을 찾아간다.그리고 메인에서부터 시작하는 모든 Bean스캔을 한다. 그 Bean들을 스캔한 후 테스트용 context를 만들면서 모든 Bean들을 등록.그 후 MockBean을 찾아서 그 Bean만 교체해준다.->sample폴더->SampleController.java, SampleService ->맨 아래탭에 있는 Test에서 돌아가는걸 실험가능함.->SampleController의 맵핑과 test의 맵핑이 서로잘 맞아야함.아니면 main함수에 잇는걸 인식해서 받아옴.
+//RANDOM-PORT/DEFINED-PORT 타입:테스트용 rest template이나 웹 클라이언트를 사용해야하며 RANDOM-PORT는 랜덤한 포트를 배정받고,DEFINED-PORT는 포트를 정해줄 수 있다. -> SampleControllerTest.java -> localhost에러뜸.다 안됨 ㅅㅂ
+
+
+//spring-boot-Devtools란? 스프링 부트가 제공하는 optical한 tool이다.pom.xml에 의존성 추가를 해줘야한다.의존성을 추가해주면,기본적으로 제공되는 properties들이 바뀌는 것이 있다.대표적으로 cash관련 항목들을 false로 바꿔줌.
+//re-start:코드가 바뀌면 그때 그때 바로 스프링 애플리케이션이 재실행됨. 클래스 로더를 2개 사용하는데, base classloader:라이브러리들,우리가 바뀌지 않는 의존성을 읽어들이는 class loader, restart classloader:애플리케이션을 읽어들이는 클래스 로더로 코드 수정 후 빌드만 해주면 서버가 재 시작됨.
+
+//spring 웹 MVC- HttpMessageConverters: 스프링부트는 기본설정에 의해 기본적으로 web mvc를 바로 사용할 수 있다.(자동 설정파일이 설정되었기 떄문??), sping MVC의 일부분이다.  HTTP 요청 본문을 객체로 변경하거나, 객체를 HTTP 응답 본문으로 변경할 때 사용한다.                                                                                                 
+//
+
+
+
 
 package com.example.demo;
 
@@ -62,7 +74,7 @@ public class DemoApplicationTests {
 
 	@Test
 	void contextLoads() {
-		assertThat(environment.getProperty("my.name")).isEqualTo("[prod]beomkyu");//실행할때나 jar파일을 만들때 my.name의 값과 같지않으면 오류가 뜸.
+		//assertThat(environment.getProperty("my.name")).isEqualTo("[prod]beomkyu");//실행할때나 jar파일을 만들때 my.name의 값과 같지않으면 오류가 뜸.
 	}
 
 }
