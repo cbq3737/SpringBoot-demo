@@ -1,6 +1,7 @@
 package com.example.demo.sample;
 
 import static org.assertj.core.api.Assertions.*;
+import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.when;
 
 import org.junit.Test;
@@ -11,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.http.MediaType;
 import org.springframework.http.client.HttpComponentsClientHttpRequestFactory;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.reactive.server.WebTestClient;
@@ -25,7 +27,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @RunWith(SpringRunner.class)
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)//SpringBootTest어노테이션에는 webEnvironment라는 속성이 있음.기본값은 MOCK임.RANDOM_PORT는 호스트가 사용하지 않는 랜덤 포트를 사용하겠다는 의미다.
 //@AutoConfigureMockMvc //MockMvc를 사용하기 위한 어노테이션 
-//@WebMvcTest(SampleController.class)
+@WebMvcTest(SampleController.class)
 public class SampleControllerTest {
        //MOCK타입 테스트 : Mock타입은 서블릿 컨테이너(톰캣같은 것)을 테스트용으로 띄우지않고 Mock을 해서 서블릿을 Mocking한 것을 띄워준다. *mockup : 실제품 만들기전 프로토타입을 만든것.요청을 수행하고 응답을 만들어내느 Servlet API모조(mock)객체를 사용
         //DISTPATCHER서블릿은 만들어지긴하는데 MOCKing이 되어 distpatchServlet애 요청을 보내는것처럼 실험을 할 수 있게된다. 그래서 이때 mockup 된 서블릿과 상호작요을 하려면 MockMVC라는 클라이언트를 사용해야한다.
@@ -95,4 +97,24 @@ public class SampleControllerTest {
         //     when(mockSampleService.getName()).thenReturn("bk");
         //     mockMvc.perform(MockMvcRequestBuilders.get("/hello!")).andExpect(MockMvcResultMatchers.content().string("hello bk"));
         // }
+
+
+
+    //HttpMessageConverter를 위함.
+    @Autowired
+    MockMvc mockMvc;
+
+    @Test
+    public void createUser_JSON() throws Exception{
+        String userJson = "{\"username\":\"beomkyu\",\"password\":\"qlxm39\"}";
+       
+        mockMvc.perform(MockMvcRequestBuilders.post("/users/create")
+                        .contentType(MediaType.APPLICATION_JSON_UTF8)//요청을 만드는 단계
+                        .accept(MediaType.APPLICATION_JSON_UTF8)
+                        .content(userJson))
+                //응답을 확인하는 단계 -> equalTo에서 오류뜸
+                .andExpect(MockMvcResultMatchers.status().isOk())
+                .andExpect(jsonPath("$.username",is("beomkyu")))
+                .andExpect(jsonPath("$.password",is("qlxm39")));
     }
+}

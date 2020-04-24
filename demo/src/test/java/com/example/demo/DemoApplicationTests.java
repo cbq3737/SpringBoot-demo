@@ -49,8 +49,14 @@
 //spring-boot-Devtools란? 스프링 부트가 제공하는 optical한 tool이다.pom.xml에 의존성 추가를 해줘야한다.의존성을 추가해주면,기본적으로 제공되는 properties들이 바뀌는 것이 있다.대표적으로 cash관련 항목들을 false로 바꿔줌.
 //re-start:코드가 바뀌면 그때 그때 바로 스프링 애플리케이션이 재실행됨. 클래스 로더를 2개 사용하는데, base classloader:라이브러리들,우리가 바뀌지 않는 의존성을 읽어들이는 class loader, restart classloader:애플리케이션을 읽어들이는 클래스 로더로 코드 수정 후 빌드만 해주면 서버가 재 시작됨.
 
-//spring 웹 MVC- HttpMessageConverters: 스프링부트는 기본설정에 의해 기본적으로 web mvc를 바로 사용할 수 있다.(자동 설정파일이 설정되었기 떄문??), sping MVC의 일부분이다.  HTTP 요청 본문을 객체로 변경하거나, 객체를 HTTP 응답 본문으로 변경할 때 사용한다.                                                                                                 
-//
+//spring 웹 MVC- HttpMessageConverters: 스프링부트는 기본설정에 의해 기본적으로 web mvc를 바로 사용할 수 있다.(자동 설정파일이 설정되었기 떄문??), sping MVC의 일부분이다.  HTTP 요청 본문을 객체로 변경하거나, 객체를 HTTP 응답 본문으로 변경할 때 사용한다. 그래서 @RequestBody/@ResponseBody 와 함께 사용된다.
+//데이터가 요청으로 들어올 때(request) 요청의 본문에 그 데이터가 들어있을때, 그걸 객체로 받고 싶으면 파라미터로 @RequestBody를 붙혀 객체로 받을 수 있다.(스프링이 알아서 바꿔줌.)                                                                                              
+//사용하는 HttpMessageConverters는 여러가지가 있고,어떤 요청을 받고 어떤 응답을 보내야하는지에 따라 사용하는 HttpMessageConverters가 달라진다.
+//컴포지션 타입(객체 안에 여러가지 프로퍼티를 가질 수 있는 타입)일 경우 기본적으로 jsonMessageConverter가 사용된다. 컴포지션 타입이 아닌 string 객체나 int객체이면 StringMessageConverter가 사용된다.
+//클래스에 @RestController가 붙어있으면 public뒤에 @ResponseBody를 생략할 수 있다. 하지만 일반 @Controller를 사용할 시 @ResponseBody를 써줘야한다. -> UserControllerTest -> 에러뜸
+
+
+//ContentNegotiatingViewResolver : ViewResolver중의 하나로, 들어오는 요청의 accpet header(부라우저 또는 클라이언트가 어떠한 타입의 본문을 응답을 원한다고 서버에 알려주는 것)에 따라 응답이 달라진다. 어떠한 요청이 들어오면 그 요청의 응답을 만들 수 있는 모든 view를 찾아내고, 최종적으로 accept header의 viw타입과 비교하여 선택한다. accept header가 없는 요청인 경우 format이라는 매개변수를 사용한다.
 
 
 
